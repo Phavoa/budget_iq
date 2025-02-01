@@ -1,3 +1,6 @@
+"use server";
+
+import dynamic from 'next/dynamic';
 import { getUserAccounts } from "@/actions/dashboard";
 import { defaultCategories } from "@/data/categories";
 import React from "react";
@@ -7,7 +10,7 @@ import { getTransaction } from "@/actions/transaction";
 const AddTransactionPage = async ({ searchParams }) => {
   const accounts = await getUserAccounts();
 
-  const { edit: editId } = await searchParams;
+  const { edit: editId } = searchParams;
   let initialData = null;
   if (editId) {
     const transacton = await getTransaction(editId);
