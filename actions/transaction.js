@@ -5,7 +5,6 @@ import { db } from "@/lib/prisma";
 import { request } from "@arcjet/next";
 import { auth } from "@clerk/nextjs/server";
 import { GoogleGenerativeAI } from "@google/generative-ai";
-import { err } from "inngest/types";
 import { revalidatePath } from "next/cache";
 
 const genAi = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);

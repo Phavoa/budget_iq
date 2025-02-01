@@ -59,6 +59,7 @@ export const getCurrentBudget = async (accountId) => {
   }
 };
 
+
 export const updateBudget = async (amount) => {
   try {
     const { userId } = await auth();
