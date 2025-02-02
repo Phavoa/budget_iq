@@ -4,11 +4,12 @@ import Link from "next/link";
 import { Button } from "./ui/button";
 import { LayoutDashboardIcon, PenBox } from "lucide-react";
 import { checkUser } from "@/lib/checkUser";
+import ThemeToggle from "./ThemeToggle";
 
 const Header = async () => {
   await checkUser();
   return (
-    <header className="fixed top-0 w-full bg-white/50 backdrop-blur border-b z-50">
+    <header className="fixed top-0 w-full dark:bg-gray-900/20 bg-gray-50/20  backdrop-blur border-b z-50">
       <nav className="container mx-auto py-4 px-4 flex items-center justify-between">
         <Link href="/">
           <Image
@@ -22,6 +23,9 @@ const Header = async () => {
         </Link>
 
         <div className="flex items-center space-x-4">
+          <div className="mx-2 flex justify-center items-center">
+            <ThemeToggle />
+          </div>
           <SignedIn>
             <Link
               href="/dashboard"

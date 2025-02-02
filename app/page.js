@@ -18,7 +18,7 @@ const Home = () => {
     <div className="mt-40">
       <HeroSection />
 
-      <section className="py-20 bg-blue-50">
+      <section className="py-20 bg-blue-50 dark:bg-gray-900">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {statsData.map((stats, index) => (
@@ -26,7 +26,7 @@ const Home = () => {
                 <div className="text-4xl font-bold text-blue-600 mb-2">
                   {stats.value}
                 </div>
-                <div className="text-gray-600">{stats.label}</div>
+                <div className="text-gray-600 darkM">{stats.label}</div>
               </div>
             ))}
           </div>
@@ -54,7 +54,7 @@ const Home = () => {
         </div>
       </section>
 
-      <section className="py-20 bg-blue-50">
+      <section className="py-20 bg-blue-50 dark:bg-gray-900">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-center mb-12">How it works</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">

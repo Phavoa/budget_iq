@@ -88,23 +88,23 @@ export const howItWorksData = [
 // Testimonials Data
 export const testimonialsData = [
   {
-    name: "Sarah Johnson",
+    name: "Sarah Akinwunmi",
     role: "Small Business Owner",
-    image: "https://randomuser.me/api/portraits/women/75.jpg",
+    image: "https://i.pinimg.com/736x/10/a4/b8/10a4b85f851e82be05ecb4b2bbd0c82e.jpg",
     quote:
       "BudgetIQ has transformed how I manage my business finances. The AI insights have helped me identify cost-saving opportunities I never knew existed.",
   },
   {
-    name: "Michael Chen",
+    name: "Michael Uche",
     role: "Freelancer",
-    image: "https://randomuser.me/api/portraits/men/75.jpg",
+    image: "https://i.pinimg.com/236x/96/ad/f6/96adf6a36bb60655548ee6f66dd3f69e.jpg",
     quote:
       "The receipt scanning feature saves me hours each month. Now I can focus on my work instead of manual data entry and expense tracking.",
   },
   {
-    name: "Emily Rodriguez",
-    role: "Financial Advisor",
-    image: "https://randomuser.me/api/portraits/women/74.jpg",
+    name: "Obi Chima Ojimma",
+    role: "Software Engineer",
+    image: "https://media.licdn.com/dms/image/v2/D4D03AQG9Hgx5yMZIPw/profile-displayphoto-shrink_800_800/B4DZQKsFQCGgAc-/0/1735346120975?e=1744243200&v=beta&t=34iyPw0JXaNWEi5aZ8Y_HCa4LJDCTyz59goLvjBzAdg",
     quote:
       "I recommend BudgetIQ to all my clients. The multi-currency support and detailed analytics make it perfect for international investors.",
   },
