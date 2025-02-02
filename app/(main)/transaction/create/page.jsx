@@ -1,3 +1,6 @@
+export const dynamic = "force-dynamic";
+
+
 import { getUserAccounts } from "@/actions/dashboard";
 import { defaultCategories } from "@/data/categories";
 import AddTransactionForm from "./_components/AddTransactionForm";
@@ -5,27 +8,25 @@ import { getTransaction } from "@/actions/transaction";
 
 const AddTransactionPage = async ({ searchParams }) => {
   const accounts = await getUserAccounts();
-  const editId = searchParams?.edit;
 
+  const { edit: editId } = await searchParams;
   let initialData = null;
   if (editId) {
-    const transaction = await getTransaction(editId);
-    initialData = transaction;
+    const transacton = await getTransaction(editId);
+    initialData = transacton;
   }
 
   return (
     <div className="max-w-3xl mx-auto px-5">
-      <div className="flex justify-center md:justify-normal mb-8">
-        <h1 className="text-5xl gradient-title ">Add Transaction</h1>
-      </div>
-      <AddTransactionForm
-        accounts={accounts}
-        categories={defaultCategories}
-        editMode={!!editId}
-        initialData={initialData}
-      />
+      <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold gradient-title mb-5">
+       {!!editId ? "Edit Transaction" : "Add Transaction"}
+      </h1>
+
+      <AddTransactionForm accounts={accounts} categories={defaultCategories} 
+      editMode={!!editId}
+      initialData={initialData} />
     </div>
   );
 };
-
 export default AddTransactionPage;
+
